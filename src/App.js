@@ -7,6 +7,9 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import {StoreAddress} from './screens/StoreAddress';
+import Corousel from './screens/Corousel';
+import StoreItemsList from './screens/StoreItemsList';
 import BuyingScreen from './screens/BuyingScreen';
 
 const App: () => React$Node = () => {
@@ -23,30 +26,9 @@ const App: () => React$Node = () => {
             </View>
           )}
           <View style={styles.body}>
-            {/* <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-
-              <Text style={styles.sectionDescription}>Hello world!</Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-
-              <Text style={styles.sectionDescription}>Hello world!</Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View> */}
-            {/* <LandingScreen /> */}
+            <StoreAddress />
+            <Corousel />
+            <StoreItemsList />
             <BuyingScreen />
           </View>
         </ScrollView>

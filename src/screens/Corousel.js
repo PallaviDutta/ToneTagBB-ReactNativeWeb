@@ -1,4 +1,5 @@
 import * as React from 'react';
+import data from '../../data.json';
 import {
   View,
   ImageBackground,
@@ -12,40 +13,12 @@ import {Title} from '../components/Title';
 const ScreenWidth = Dimensions.get('window').width / 100;
 const ScreenHeight = Dimensions.get('window').height / 100;
 
-const eventslist = [
-  {
-    src:
-      'https://image.freepik.com/free-photo/fried-eggs-drinks-breakfast_23-2147758279.jpg',
-    title: 'Breakfast',
-  },
-  {
-    src:
-      'https://image.freepik.com/free-photo/indian-masala-egg-omelet_136595-191.jpg',
-    title: 'Brunch',
-  },
-  {
-    src:
-      'https://image.freepik.com/free-photo/north-indian-thali-tipical-meal-served-stainless-steel-plate-blue-table_107467-1331.jpg',
-    title: 'Lunch',
-  },
-  {
-    src:
-      'https://image.freepik.com/free-photo/club-sandwich-with-ham-lettuce-tomato-cheese-fries-wooden-board_140725-196.jpg',
-    title: 'Snacks',
-  },
-  {
-    src:
-      'https://image.freepik.com/free-photo/national-uzbek-pilaf-with-meat-cast-iron-skillet-wooden-table_127425-8.jpg',
-    title: 'Dinner',
-  },
-];
-
 export default class Corousel extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: '',
+      data1: data,
     };
   }
 
@@ -55,16 +28,16 @@ export default class Corousel extends React.Component {
       <TouchableWithoutFeedback
         onPress={() => {
           this.setState({
-            data: item.title,
+            data: item.category_name,
           });
           this.props.onCarouselPress;
         }}>
         <View>
           <ImageBackground
-            source={{uri: item.src}}
+            source={{uri: item.image_url}}
             style={styles.imageBackgroundStyle}></ImageBackground>
           <View style={styles.titleView}>
-            <Title style={styles.titleStyle}>{item.title}</Title>
+            <Title style={styles.titleStyle}>{item.category_name}</Title>
           </View>
         </View>
       </TouchableWithoutFeedback>
@@ -72,13 +45,14 @@ export default class Corousel extends React.Component {
   );
 
   render() {
+    //console.log('corousel', data.data.section);
     return (
       <View style={styles.mainContainer}>
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}
           keyExtractor={this.keyExtractor}
-          data={eventslist}
+          data={this.state.data1.data.section}
           renderItem={this.renderCarousel}
         />
       </View>
@@ -93,7 +67,7 @@ const styles = {
   cardContainerStyle: {
     borderRadius: 8,
     overflow: 'hidden',
-    //elevation: 5,
+    //elevation: 7,
     margin: ScreenHeight * 2,
     width: 220,
   },
