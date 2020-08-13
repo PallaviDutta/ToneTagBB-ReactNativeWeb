@@ -64,20 +64,20 @@ const styles = StyleSheet.create({
   },
   headerTitleContainer: {
     // borderWidth: 1,
-    marginLeft: ScreenWidth * 5,
+    marginLeft: ScreenWidth * 3,
   },
   headerTitleText: {
     fontFamily: 'Rubik-Medium',
     fontSize: ScreenHeight * 2.5,
     letterSpacing: 0.25,
-    textAlign: 'center',
+    textAlign: 'left',
     color: '#060606',
   },
   headerSubTitleText: {
     fontFamily: 'Rubik-Medium',
     fontSize: ScreenHeight * 2,
     letterSpacing: 0.25,
-    textAlign: 'center',
+    textAlign: 'left',
     color: '#060606',
   },
   filterContainer: {
