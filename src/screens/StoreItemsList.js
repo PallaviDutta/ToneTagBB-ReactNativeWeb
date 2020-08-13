@@ -11,22 +11,21 @@ import {
   ScrollView,
 } from 'react-native';
 export class StoreItemsList extends Component {
+  state = {
+    data: data,
+  };
+
   render() {
-    //console.log('render');
-    return (
-      <View
-        style={{
-          backgroundColor: '#F5F5F5',
-        }}>
-        <ScrollView horizontal={true}>
-          <Text style={styles.itemHorizontalScrollStyle}>Food Grain</Text>
-          <Text style={styles.itemHorizontalScrollStyle}>Pulses</Text>
-          <Text style={styles.itemHorizontalScrollStyle}>Flours</Text>
-          <Text style={styles.itemHorizontalScrollStyle}>Edible Oil</Text>
-          <Text style={styles.itemHorizontalScrollStyle}>Spices</Text>
-        </ScrollView>
-      </View>
-    );
+    // console.log('sil', this.state.data.data.section[0].category_name);
+    const categoryList = this.state.data.data.section.map((data) => {
+      return (
+        <Text style={styles.itemHorizontalScrollStyle}>
+          {data.category_name}
+        </Text>
+      );
+    });
+
+    return <ScrollView horizontal={true}>{categoryList}</ScrollView>;
   }
 }
 const styles = StyleSheet.create({
@@ -35,6 +34,9 @@ const styles = StyleSheet.create({
     margin: 15,
     fontSize: 15,
     fontFamily: 'Rubik-Medium',
+    backgroundColor: '#F5F5F5',
+    borderRadius: 8,
+    padding: 5,
   },
 });
 export default StoreItemsList;
