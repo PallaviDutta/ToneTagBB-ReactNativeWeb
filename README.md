@@ -36,7 +36,6 @@ Screenshots:
 
 ![BB_Android_UI](https://user-images.githubusercontent.com/27771095/90404047-72f11900-e0bf-11ea-9d52-7831f6690cfc.jpeg)
 
-Reference Link:
-https://medium.com/@aureliomerenda/create-a-native-web-app-with-react-native-web-419acac86b82
+[Reference Link](https://medium.com/@aureliomerenda/create-a-native-web-app-with-react-native-web-419acac86b82)
 
-** Clone this repository to create a BB React Native app for the web. **
+## Clone this repository to create a BB React Native app for the web.
