@@ -2,8 +2,6 @@
 
 #### Do you want to create a web app and, at the same time, a native app for Android and iOS with only one source code?It could work with the help of React Native Web library.
 
-Clone this repository to achieve the same.
-
 How to run and test all: iOS, Android and Web platform?
 
 1. Run native server:
@@ -28,10 +26,6 @@ yarn run web
 
 (Now you should see your app running on web on http://localhost:3000/.)
 
-Github Link:
-
-https://github.com/PallaviDutta/ToneTagBB-ReactNativeWeb
-
 Screenshots:
 
 ###### Web
@@ -40,4 +34,9 @@ Screenshots:
 
 ###### Android Device
 
-![AndroidView](https://user-images.githubusercontent.com/27771095/90399996-6b2e7600-e0b9-11ea-97ba-b42855e44191.jpeg)
+![BB_Android_UI](https://user-images.githubusercontent.com/27771095/90404047-72f11900-e0bf-11ea-9d52-7831f6690cfc.jpeg)
+
+Reference Link:
+https://medium.com/@aureliomerenda/create-a-native-web-app-with-react-native-web-419acac86b82
+
+** Clone this repository to create a BB React Native app for the web. **
