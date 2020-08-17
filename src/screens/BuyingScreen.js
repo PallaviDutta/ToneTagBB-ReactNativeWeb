@@ -10,12 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import MaterialIcon from 'react-native-vector-icons/dist/MaterialIcons';
-import MaterialCommunityIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import ItemWithDescription from '../components/ItemWithDescription';
-
-import productImage from '../assets/fortuneRice.png';
-import productImage1 from '../assets/kohinoorRice.png';
 
 const ScreenWidth = Dimensions.get('window').width / 100;
 const ScreenHeight = Dimensions.get('window').height / 100;
@@ -31,29 +26,49 @@ export class BuyingScreen extends Component {
             key: '1',
             title: 'Fortune Everyday Basmati Rice Full Grain - 1Kg',
             subtitle: '₹ 149.00',
-            qty: 1,
-            icon: <Image source={productImage}></Image>,
+            qty: 0,
+            icon: (
+              <Image
+                style={{width: 100, height: 100}}
+                source={require('../assets/rice.png')}
+              />
+            ),
           },
           {
             key: '2',
             title: 'Fortune Everyday Basmati Rice Full Grain - 5Kg',
             subtitle: '₹ 449.00',
-            qty: 1,
-            icon: <Image source={productImage}></Image>,
+            qty: 0,
+            icon: (
+              <Image
+                style={{width: 100, height: 100}}
+                source={require('../assets/rice.png')}
+              />
+            ),
           },
           {
             key: '3',
             title: 'Kohinoor Royale Authentic Biryani Basmati Rice - 0.5Kg',
             subtitle: '₹ 79.00',
             qty: 1,
-            icon: <Image source={productImage1}></Image>,
+            icon: (
+              <Image
+                style={{width: 100, height: 100}}
+                source={require('../assets/rice1.png')}
+              />
+            ),
           },
           {
             key: '4',
             title: 'Kohinoor Royale Authentic Biryani Basmati Rice - 5Kg',
             subtitle: '₹ 550.00',
             qty: 1,
-            icon: <Image source={productImage1}></Image>,
+            icon: (
+              <Image
+                style={{width: 100, height: 100}}
+                source={require('../assets/rice1.png')}
+              />
+            ),
           },
         ],
       },
@@ -65,21 +80,36 @@ export class BuyingScreen extends Component {
             title: 'Fortune Everyday Basmati Rice Full Grain - 1Kg',
             subtitle: '₹ 449.00',
             qty: 0,
-            icon: <Image source={productImage}></Image>,
+            icon: (
+              <Image
+                style={{width: 100, height: 100}}
+                source={require('../assets/rice.png')}
+              />
+            ),
           },
           {
             key: '2',
             title: 'Fortune Everyday Basmati Rice Full Grain - 1Kg',
             subtitle: '₹ 449.00',
             qty: 0,
-            icon: <Image source={productImage}></Image>,
+            icon: (
+              <Image
+                style={{width: 100, height: 100}}
+                source={require('../assets/rice.png')}
+              />
+            ),
           },
           {
             key: '3',
             title: 'Fortune Everyday Basmati Rice Full Grain - 1Kg',
             subtitle: '₹ 449.00',
             qty: 0,
-            icon: <Image source={productImage}></Image>,
+            icon: (
+              <Image
+                style={{width: 100, height: 100}}
+                source={require('../assets/rice1.png')}
+              />
+            ),
           },
         ],
       },
@@ -204,7 +234,6 @@ const styles = StyleSheet.create({
   },
   checkoutButtonContainer: {
     borderWidth: 1,
-    // borderColor: 'white',
     flexDirection: 'row',
     marginBottom: ScreenHeight * 4,
     width: ScreenWidth * 90,

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import data from '../../data.json';
+import data from '../jsondata/data.json';
 import {
   View,
   ImageBackground,
@@ -13,7 +13,7 @@ import {Title} from '../components/Title';
 const ScreenWidth = Dimensions.get('window').width / 100;
 const ScreenHeight = Dimensions.get('window').height / 100;
 
-export default class Corousel extends React.Component {
+class Corousel extends React.Component {
   constructor(props) {
     super(props);
 
@@ -30,7 +30,6 @@ export default class Corousel extends React.Component {
           this.setState({
             data: item.category_name,
           });
-          this.props.onCarouselPress;
         }}>
         <View>
           <ImageBackground
@@ -45,7 +44,6 @@ export default class Corousel extends React.Component {
   );
 
   render() {
-    //console.log('corousel', data.data.section);
     return (
       <View style={styles.mainContainer}>
         <FlatList
@@ -87,3 +85,4 @@ const styles = {
     marginVertical: 10,
   },
 };
+export default Corousel;

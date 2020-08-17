@@ -5,36 +5,23 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
+  Image,
 } from 'react-native';
-
-import MaterialIcon from 'react-native-vector-icons/dist/MaterialIcons';
-import MaterialCommunityIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 
 const ScreenWidth = Dimensions.get('window').width / 100;
 const ScreenHeight = Dimensions.get('window').height / 100;
 
 const decreaseQtyButton = (
-  <MaterialCommunityIcon name="minus" size={ScreenWidth * 4} color="#FFA500" />
+  <Image
+    source={require('../assets/minus.png')}
+    style={{width: 10, height: 10}}
+  />
 );
 
 class ItemWithDescription extends Component {
   shouldComponentUpdate(nextProps, nextState) {
-    // console.log(nextProps.title === this.props.title);
-    // console.log(nextProps.subtitle === this.props.subtitle);
-    // console.log(nextProps.icon === this.props.icon);
-    // console.log(nextProps.qty === this.props.qty);
-    // console.log(nextProps.itemCategory === this.props.itemCategory);
-    // console.log(nextProps.itemIndex === this.props.itemIndex);
-    // console.log(
-    //   nextProps.increaseItemQuantity === this.props.increaseItemQuantity,
-    // );
-    // console.log(
-    //   nextProps.decreaseItemQuantity === this.props.decreaseItemQuantity,
-    // );
-    // console.log('---------------------------------');
     return nextProps.qty !== this.props.qty;
   }
-  //const {itemStyle, iconStyle, icon} = this.props;
 
   handleIncreaseButton = () => {
     this.props.increaseItemQuantity(
@@ -50,15 +37,13 @@ class ItemWithDescription extends Component {
   };
 
   increaseQtyButton = (
-    <MaterialCommunityIcon
-      name="plus"
-      size={ScreenWidth * 4}
-      color={this.props.qty ? '#FFA500' : '#757575'}
+    <Image
+      source={require('../assets/plus.png')}
+      style={{width: 10, height: 10}}
     />
   );
 
   render() {
-    // console.log('ItemWithDescription: ', this.props);
     return (
       <View
         style={
@@ -151,19 +136,16 @@ class ItemWithDescription extends Component {
 
 const styles = StyleSheet.create({
   itemContainer: {
-    // borderWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#FFF',
   },
   iconContainer: {
-    // borderWidth: 1,
     alignItems: 'center',
     padding: ScreenWidth * 2.4,
     marginRight: ScreenWidth * 3,
   },
   descContainer: {
-    // borderWidth: 1,
     flex: 1,
     paddingVertical: ScreenHeight * 2.3,
     flexDirection: 'row',
@@ -172,14 +154,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   titleSubtitleContainer: {
-    // borderWidth: 1,
     justifyContent: 'center',
     flex: 7,
   },
   titleText: {
     fontFamily: 'Rubik-Bold',
     flexWrap: 'wrap',
-    fontSize: ScreenHeight * 2,
+    fontSize: 18,
     fontStyle: 'normal',
     lineHeight: 24,
     letterSpacing: 0.15,
@@ -188,7 +169,7 @@ const styles = StyleSheet.create({
   subtitleText: {
     flexWrap: 'wrap',
     fontFamily: 'Roboto',
-    fontSize: ScreenHeight * 1.8,
+    fontSize: 18,
     fontWeight: 'normal',
     fontStyle: 'normal',
     lineHeight: 20,
@@ -196,38 +177,31 @@ const styles = StyleSheet.create({
     color: 'rgb(142, 142, 142)',
   },
   rightActionContainer: {
-    // borderWidth: 1,
     flex: 6,
     flexDirection: 'row-reverse',
     alignItems: 'center',
     paddingLeft: ScreenWidth * 2,
   },
   buttonContainer: {
-    // borderWidth: 1,
-    // flex: 1,
-    // justifyContent: 'space-between',
     flexDirection: 'row-reverse',
-    borderRadius: ScreenWidth * 1.8,
-    padding: ScreenWidth * 1.8,
     borderWidth: 1,
     borderColor: '#FFA500',
+    borderRadius: 10,
+    padding: 5,
   },
   decreaseButtonContainer: {
-    // borderWidth: 1,
-    // flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     padding: ScreenWidth * 0.8,
   },
   quantityContainer: {
-    // borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: ScreenWidth * 0.8,
+    padding: 5,
   },
   quantityText: {
     fontFamily: 'Rubik-Medium',
-    fontSize: ScreenWidth * 4,
+    fontSize: 18,
     fontWeight: '500',
     fontStyle: 'normal',
     lineHeight: 24,
@@ -236,7 +210,6 @@ const styles = StyleSheet.create({
     color: 'rgba(0, 0, 0, 0.87)',
   },
   increaseButtonContainer: {
-    // borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: ScreenWidth * 0.8,
@@ -244,17 +217,16 @@ const styles = StyleSheet.create({
   increaseButtonContainer1: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: ScreenWidth * 0.8,
+    padding: 12,
     flexDirection: 'row-reverse',
-    borderRadius: ScreenWidth * 1.8,
-    padding: ScreenWidth * 2,
+    borderRadius: 10,
     borderWidth: 1,
     borderColor: '#FFA500',
-    width: '78%',
-    height: '38%',
+    width: 80,
+    height: 40,
   },
   addButtonStyle: {
-    fontSize: ScreenHeight * 1.8,
+    fontSize: 15,
     margin: 3,
     color: '#FFA500',
   },
