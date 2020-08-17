@@ -34,8 +34,8 @@ Screenshots:
 
 ###### Android Device
 
-![BB_Android_UI](https://user-images.githubusercontent.com/27771095/90404047-72f11900-e0bf-11ea-9d52-7831f6690cfc.jpeg)
+![AndrpooidUI](https://user-images.githubusercontent.com/27771095/90406600-0b3ccd00-e0c3-11ea-8f48-770aed0eb9c1.jpeg)
 
-[Reference Link](https://medium.com/@aureliomerenda/create-a-native-web-app-with-react-native-web-419acac86b82)
+[Reference Link To Create React Native app for Web Boilerplate](https://medium.com/@aureliomerenda/create-a-native-web-app-with-react-native-web-419acac86b82)
 
-## Clone this repository to create a BB React Native app for the web.
+###### Clone this repository to create a BB React Native app for the web.
