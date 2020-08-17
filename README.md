@@ -6,23 +6,23 @@
 
 #### How to run and test all: iOS, Android and Web platform?
 
-## 1. Run native server:
+#### 1. Run native server:
 
 #### yarn start
 
-## 2. Open a new terminal tab and run XCode Simulator with our new iOS app:
+#### 2. Open a new terminal tab and run XCode Simulator with our new iOS app:
 
 #### yarn run ios
 
 #### (Now you should see your app running on iOS.)
 
-## 3. Open an Android emulator (Android Studio > AVD Manager)When the Android emulator is ready, run our new Android app:
+#### 3. Open an Android emulator (Android Studio > AVD Manager)When the Android emulator is ready, run our new Android app:
 
 #### yarn run android
 
 #### (Now you should see your app running on Android.)
 
-## 4. Finally, run also the web app:
+#### 4. Finally, run also the web app:
 
 #### yarn run web
 
@@ -40,4 +40,4 @@ https://github.com/PallaviDutta/ToneTagBB-ReactNativeWeb
 
 ###### Android Device
 
-![BB_Android_UI](https://user-images.githubusercontent.com/27771095/90398121-851a8980-e0b6-11ea-9045-f897fcb5cb77.jpeg)
+![AndroidView](https://user-images.githubusercontent.com/27771095/90399996-6b2e7600-e0b9-11ea-97ba-b42855e44191.jpeg)
